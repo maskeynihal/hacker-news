@@ -1,14 +1,24 @@
 import React from "react";
 import "./App.css";
 import AllNews from "pages/allNews";
+import SingleNews from "pages/singleNews";
 import "style/style.scss";
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link,
+	useRouteMatch,
+	useParams,
+} from "react-router-dom";
 
 function App() {
 	return (
 		<div className="App">
-			<div className="container">
-				<AllNews></AllNews>
-			</div>
+			<Router>
+				<Route exact path="/" component={AllNews} />
+				<Route path="/:newsId" component={SingleNews} />
+			</Router>
 		</div>
 	);
 }

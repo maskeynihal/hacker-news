@@ -1,13 +1,13 @@
 @import "./utilities/utilities";
 
 @import "components/Card/style.scss";
-
+@import "components/Comment/style.scss";
 // global styles
 body {
-	color: #ffffff;
-	background: #000000;
+  color: #ffffff;
+  background: #000000;
 }
 
 .container {
-	margin: 20px;
+  margin: 20px;
 }

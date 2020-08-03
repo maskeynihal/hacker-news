@@ -11,6 +11,7 @@ export default class NewsList extends Component {
 	paginateStories() {
 		return this.props.state.stories;
 	}
+
 	render() {
 		return (
 			<div>

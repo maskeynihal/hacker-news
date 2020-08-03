@@ -27,9 +27,11 @@ export default class AllNews extends Component {
 
 	render() {
 		return (
-			<div>
-				{this.state.isLoading && <div>Loading...</div>}
-				<NewsList state={this.state}></NewsList>
+			<div className="container">
+				<div>
+					{this.state.isLoading && <div>Loading...</div>}
+					<NewsList state={this.state}></NewsList>
+				</div>
 			</div>
 		);
 	}
