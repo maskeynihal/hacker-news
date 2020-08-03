@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { getItemUrlById } from "utils/api";
 import Card from "components/Card";
-
+import Loading from "components/Loading";
 export default class NewsStory extends Component {
 	constructor() {
 		super();
@@ -26,7 +26,7 @@ export default class NewsStory extends Component {
 	render() {
 		return (
 			<div>
-				{this.state.isLoading && <div>LOADING...</div>}
+				{this.state.isLoading && <Loading></Loading>}
 				{!this.state.isLoading && <Card data={this.state.data}></Card>}
 			</div>
 		);
