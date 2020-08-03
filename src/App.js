@@ -15,7 +15,7 @@ import {
 function App() {
 	return (
 		<div className="App">
-			<Router>
+			<Router basename={process.env.PUBLIC_URL}>
 				<Route exact path="/" component={AllNews} />
 				<Route path="/:newsId" component={SingleNews} />
 			</Router>

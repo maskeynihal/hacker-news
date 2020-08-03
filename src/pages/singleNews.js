@@ -19,6 +19,12 @@ export default class SingleNews extends Component {
 			.then((data) => this.setState({ data, isLoading: false }));
 	}
 
+	getNewsComments() {
+		const r =
+			this.state.data && this.state.data.kids ? this.state.data.kids : [];
+		return r;
+	}
+
 	render() {
 		return (
 			<div>
@@ -28,7 +34,7 @@ export default class SingleNews extends Component {
 				</div>
 				<div className="news__comments">
 					{!this.state.isLoading && (
-						<CommentList comments={this.state.data.kids || []}></CommentList>
+						<CommentList comments={this.getNewsComments()}></CommentList>
 					)}
 				</div>
 			</div>

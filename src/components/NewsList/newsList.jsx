@@ -5,7 +5,6 @@ export default class NewsList extends Component {
 	componentDidMount() {
 		const props = this.props;
 		this.setState({ props: { ...props, isLoading: false } });
-		console.log(this.props.state);
 	}
 
 	paginateStories() {

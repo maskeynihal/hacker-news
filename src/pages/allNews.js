@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 import { topStoriesUrl } from "utils/api";
 import NewsList from "components/NewsList/newsList";
+import Loading from "components/Loading";
 
 export default class AllNews extends Component {
 	constructor() {
 		super();
-
 		this.state = {
 			stories: [],
 			isLoading: true,
@@ -14,7 +14,7 @@ export default class AllNews extends Component {
 	}
 
 	componentDidMount() {
-		const stories = fetch(topStoriesUrl)
+		fetch(topStoriesUrl)
 			.then((response) => response.json())
 			.then((data) => {
 				this.setState({
@@ -29,8 +29,8 @@ export default class AllNews extends Component {
 		return (
 			<div className="container">
 				<div>
-					{this.state.isLoading && <div>Loading...</div>}
-					<NewsList state={this.state}></NewsList>
+					{this.state.isLoading && <Loading></Loading>}
+					{!this.state.isLoading && <NewsList state={this.state}></NewsList>}
 				</div>
 			</div>
 		);
