@@ -1,0 +1,13 @@
+@import "./utilities/utilities";
+
+@import "components/Card/style.scss";
+
+// global styles
+body {
+	color: #ffffff;
+	background: #000000;
+}
+
+.container {
+	margin: 20px;
+}

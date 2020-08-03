@@ -1,0 +1,22 @@
+.card {
+	border-radius: 8px;
+	min-height: 70px;
+	margin: 8px 0;
+	background: #111111;
+
+	@include e(title) {
+		padding: 10px;
+		font-size: 24px;
+	}
+
+	@include e(footer) {
+		padding: 10px 0;
+		font-size: 16px;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	@include e(score) {
+		color: #efefef;
+	}
+}
