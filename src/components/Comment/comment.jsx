@@ -34,7 +34,7 @@ export default class Comment extends Component {
 	render() {
 		return (
 			<div>
-				{this.state.isLoading && <Loading></Loading>}
+				{this.state.isLoading && <Loading skeleton={true}></Loading>}
 				{!this.state.isLoading && (
 					<div className="comment-card">
 						<div className="comment-card__description">

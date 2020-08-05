@@ -3,14 +3,7 @@ import "./App.css";
 import AllNews from "pages/allNews";
 import SingleNews from "pages/singleNews";
 import "style/style.scss";
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Link,
-	useRouteMatch,
-	useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
 	return (
